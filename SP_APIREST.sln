@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SP_APIREST", "SP_APIREST\SP_APIREST.csproj", "{39EED902-76E4-4EB7-BEF2-13E20996B89A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39EED902-76E4-4EB7-BEF2-13E20996B89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39EED902-76E4-4EB7-BEF2-13E20996B89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39EED902-76E4-4EB7-BEF2-13E20996B89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39EED902-76E4-4EB7-BEF2-13E20996B89A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

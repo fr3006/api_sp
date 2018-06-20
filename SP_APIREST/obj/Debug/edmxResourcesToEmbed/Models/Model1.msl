@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="personasModelStoreContainer" CdmEntityContainer="personasEntities">
+    <EntitySetMapping Name="persona">
+      <EntityTypeMapping TypeName="personasModel.persona">
+        <MappingFragment StoreEntitySet="persona">
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="sn" ColumnName="sn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="deletePersona" FunctionName="personasModel.Store.deletePersona" />
+    <FunctionImportMapping FunctionImportName="getpersona" FunctionName="personasModel.Store.getpersona">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="personasModel.getpersona_Result">
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getPersonasId" FunctionName="personasModel.Store.getPersonasId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="personasModel.getPersonasId_Result">
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="postPersona" FunctionName="personasModel.Store.postPersona" />
+    <FunctionImportMapping FunctionImportName="putPersona" FunctionName="personasModel.Store.putPersona" />
+  </EntityContainerMapping>
+</Mapping>

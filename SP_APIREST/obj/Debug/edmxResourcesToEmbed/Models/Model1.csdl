@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="personasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="persona">
+    <Key>
+      <PropertyRef Name="nombres" />
+      <PropertyRef Name="pais" />
+    </Key>
+    <Property Name="cedula" Type="Int32" />
+    <Property Name="nombres" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pais" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sn" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="personasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="persona" EntityType="Self.persona" />
+    <FunctionImport Name="deletePersona">
+      <Parameter Name="cedula" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getpersona" ReturnType="Collection(personasModel.getpersona_Result)" />
+    <FunctionImport Name="getPersonasId" ReturnType="Collection(personasModel.getPersonasId_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="postPersona">
+      <Parameter Name="cedula" Mode="In" Type="Int32" />
+      <Parameter Name="nombres" Mode="In" Type="String" />
+      <Parameter Name="pais" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="putPersona">
+      <Parameter Name="cedula" Mode="In" Type="Int32" />
+      <Parameter Name="nombres" Mode="In" Type="String" />
+      <Parameter Name="pais" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="getpersona_Result">
+    <Property Type="Int32" Name="cedula" Nullable="true" />
+    <Property Type="String" Name="nombres" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="pais" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getPersonasId_Result">
+    <Property Type="Int32" Name="cedula" Nullable="true" />
+    <Property Type="String" Name="nombres" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="pais" Nullable="false" MaxLength="50" />
+  </ComplexType>
+</Schema>
